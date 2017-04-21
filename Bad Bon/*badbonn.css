@@ -1,0 +1,1043 @@
+/*-----------------------------------------------------------
+	
+	HTML5 & CSS 
+	by Dominik Ogilvie for Avant la lettre
+	http://www.avantlalettre.ch
+	
+	Graphic Design
+	by ATLAS Studio and Janosch Perler
+	
+	(c) 2013; v2013-09-24
+	
+-----------------------------------------------------------*/
+/*
+   HTML5 Boilerplate:
+*/
+/*
+   Base styles: opinionated defaults
+*/
+html, button, input, select, textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.3;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/*
+   Chrome Frame prompt
+*/
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*
+   Custom styles
+*/
+/*	---------------------------------------------
+##	POSITIONIERUNG
+*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 944px;
+    margin: 30px auto;
+    font-family: "Times New Roman", serif;
+}
+
+#top {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+hr.clear {
+    border-color: transparent;
+    margin: 0;
+}
+
+.page-break {
+    page-break-before: always;
+}
+
+hr.page-break {
+    page-break-before: always;
+    clear: both;
+    visibility: hidden;
+    height: 1px;
+}
+
+/* in globo */
+h1 {
+    margin: 0;
+    clear: both;
+}
+
+h1, p {
+    margin-top: 0;
+}
+
+/* Kopfzeile: */
+#masthead, #spotlight {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 230px;
+    background-color: white;
+    padding-top: 30px;
+}
+
+#masthead {
+    left: 0;
+    padding-right: 12px ;
+}
+
+#masthead > * {
+    width: 460px;
+    text-align: center;
+    float: right;
+    clear: both;
+}
+
+#spotlight {
+    right: 0;
+    padding-left: 12px;
+}
+
+#spotlight > * {
+    width: 460px;
+    text-align: center;
+    float: left;
+    clear: both;
+}
+
+#spotlight time {
+    display: block;
+}
+
+#spotlight .side-b {
+    display: none;
+}
+
+#spotlight:hover .side-a {
+    display: none;
+}
+
+#spotlight:hover .side-b {
+    display: block;
+}
+
+/* Kopfzeile: Einrahmungen */
+#masthead > *, #spotlight a > * {
+    height: 102px;
+}
+
+#logotype, #spotlight time {
+    border: 5px solid #222222;
+}
+
+#masthead nav, #spotlight h1 {
+    border: 5px solid #222222;
+    border-top: none;
+}
+
+#spotlight time.twolines {
+    border: 5px solid #222222;
+    overflow-y: hidden;
+    height: 204px;
+}
+
+#spotlight time {
+    border-bottom: none;
+}
+
+#spotlight h1 {
+    padding-bottom: 5px;
+}
+
+/* Kopfzeile: Hauptnavigation */
+#masthead nav {
+    font-size: 26px;
+    line-height: 1.2;
+    padding: 16px 0;
+}
+
+#masthead nav ul {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#masthead nav ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+#masthead nav li a {
+    display: inline-block;
+    padding: 0 0.25em;
+}
+
+section {
+    clear: both;
+    padding-top: 240px;
+    position: relative;
+}
+
+#left {
+    width: 460px;
+    /* float: left; */
+    margin-bottom: 4em;
+}
+
+#right {
+    width: 460px;
+    float: right;
+    line-height: 1.2 !important;
+}
+
+#section {
+    position: fixed;
+    padding-top: 30px;
+    margin-top: 234px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+}
+
+#section #left {
+    margin: 0 auto;
+    position: relative;
+    left: -230px;
+}
+
+#right {
+    z-index: 50;
+}
+
+#right img {
+    margin-bottom: 1.2em;
+}
+
+#right {
+    position: fixed;
+    left: 50%;
+    top: 234px;
+    /* bottom: 0; */
+    margin-left: 12px;
+    width: 460px;
+    padding: 48px 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+.touch #right {
+    overflow-y: visible !important;
+}
+
+.subnav {
+    padding-top: 5px;
+}
+
+.subnav ul, .subnav li, .subnav a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.subnav li {
+    padding-bottom: 25px;
+    line-height: 0.9;
+}
+
+.subnav p {
+    margin: 0;
+    z-index: 5 !important;
+    position: relative;
+}
+
+.simple a, .simple li {
+    margin-bottom: 0;
+}
+
+#main .detail + .detail {
+    margin-top: 2em;
+}
+
+#main.detail, #main .detail {
+    width: 460px;
+    padding: 22px;
+    background-color: #79fbb9;
+}
+
+#main.detail img, #main .detail img {
+    width: 416px;
+    height: auto;
+}
+
+#right:hover {
+    width: 460px;
+    overflow-y: visible;
+}
+
+footer {
+    display: none;
+}
+
+/*	---------------------------------------------
+##	ERSCHEINUNG
+*/
+small {
+    font-size: 15px;
+}
+
+.shop small {
+    line-height: 1.56;
+}
+
+/* Listen */
+#main {
+    /* remove bullet, prepend dash, hanging paragraph */
+    /* en-dash, en-space */
+}
+
+#main ol {
+    margin-left: 2em;
+}
+
+#main ol {
+    list-style-type: decimal;
+}
+
+#main ul {
+    margin-bottom: 1em;
+}
+
+#main ul {
+    list-style: none;
+    margin-left: 0.15em;
+    padding-left: 1.15em;
+    text-indent: -1.15em;
+}
+
+#main ul li:before {
+    content: "\2013\2002";
+}
+
+#right nav {
+    height: 2em;
+    font-size: 15px;
+}
+
+#right nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+
+#right nav ul li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 0.5em;
+}
+
+#right nav ul li:before {
+    content: "";
+}
+
+#right nav li a {
+    display: inline-block;
+}
+
+/* JQuery: IE7 does not understand :before and :after; 
+#main.ie7 ul li:before  { content: "- "; } */
+/*	Typografie  */
+.xerox, #masthead *, #spotlight *, .subnav h1 a {
+    font-family: 'xerox_sans_serif_narrowbold', 'Arial Narrow', Impact, sans-serif, Impact, sans-serif;
+    font-weight: normal;
+}
+
+.titling, #spotlight *, #masthead h1, .subnav h1 a {
+    font-size: 72px;
+}
+
+.large {
+    font-size: 72px;
+}
+
+.medium {
+    font-size: 26px;
+}
+
+.subnav a {
+    line-height: 0.9;
+}
+
+.subnav a i {
+    font-size: 36px;
+    font-style: normal;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    line-height: 1em;
+}
+
+.subnav a i:after {
+    content: ",";
+    font-size: 72px;
+    margin-left: 0.03em;
+}
+
+.subnav a i:last-child:after {
+    content: "";
+}
+
+section, #section {
+    font-size: 1.125em;
+}
+
+#main h1 {
+    margin-top: 0;
+}
+
+#main h1, #main p {
+    margin-bottom: 0.9em;
+}
+
+#main p.clips {
+    position: relative;
+}
+
+#main iframe {
+    margin-bottom: 1.33em;
+    border: none;
+    position: relative !important;
+}
+
+/*	Konzerte  */
+#main h1, .event-exzerpt h1 {
+    margin-bottom: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.92em;
+    letter-spacing: 0.07em;
+    cursor: default !important;
+}
+
+#main h1 a, .event-exzerpt h1 a {
+    border-bottom: none !important;
+    cursor: default;
+}
+
+#main h1 i, .event-exzerpt h1 i {
+    text-transform: none;
+    letter-spacing: 0;
+    font-style: italic;
+}
+
+.francais {
+    font-style: italic;
+}
+
+.vimeo, .youtube {
+    width: 416px;
+    height: 274px;
+}
+
+.nation {
+    font-size: 15px;
+    margin-left: 0.1em;
+}
+
+.fade {
+    width: 416px;
+    height: 312px !important;
+}
+
+/* Konzertkalender */
+ul.kalenderdaten {
+    list-style: none;
+}
+
+ul.kalenderdaten time {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+ul.kalenderdaten li {
+    display: inline;
+    float: left;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    font-size: 15px;
+    line-height: 1.1;
+}
+
+ul.kalenderdaten li a {
+    display: block;
+    width: 112px;
+    height: 150px;
+    padding: 0 10px 10px 5px;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kalender ul.kalenderdaten p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+ul.kalenderdaten li:hover {
+    background-color: #79fbb9;
+}
+
+ul.kalenderdaten li.sel {
+    background-color: #79fbb9;
+}
+
+.kalender ul.kalenderdaten li.today {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border: 3px solid black;
+}
+
+.kalender ul.kalenderdaten li.today a {
+    width: 109px;
+    height: 147px;
+}
+
+ul.kalenderdaten .day {
+    float: right;
+    margin: 0.7em 0.5em 0 0;
+    font-size: 15px;
+    font-family: "Times New Roman", serif;
+}
+
+ul.kalenderdaten strong.open {
+    display: none;
+}
+
+#left .cal-print {
+    float: right;
+    position: relative;
+    font-size: 1rem;
+    margin-top: 1.5em;
+    padding-right: 1.5em;
+    font-size: 15px;
+    font-family: "Times New Roman", serif;
+    visibility: hidden;
+}
+
+#left .cal-print a {
+    color: #aaa !important;
+}
+
+#left:hover .cal-print {
+    visibility: visible;
+}
+
+/* Monatsï¿½bersicht */
+.monatsplan {
+    width: 94%;
+    /* w160 h180*/
+}
+
+.monatsplan #top {
+    width: 100%;
+}
+
+.monatsplan section {
+    padding-top: 0;
+}
+
+.monatsplan ul li a, .monatsplan span.day {
+    font-size: 1em;
+    font-family: "minion-pro" "Minion Pro", serif;
+}
+
+.monatsplan time {
+    font-size: 1.5rem;
+}
+
+.monatsplan small, .monatsplan span.day {
+    font-size: 0.78rem;
+    line-height: 1rem;
+}
+
+.monatsplan strong {
+    font-family: "minion-pro" "Minion Pro", serif;
+    font-weight: 600;
+}
+
+.monatsplan h1 {
+    display: inline;
+    float: left;
+    width: 300px;
+    height: 100px;
+    margin-bottom: 25px;
+    line-height: 0.8;
+}
+
+.monatsplan ul.kalenderdaten li a {
+    width: 150px;
+    height: 125px;
+    padding: 0 20px 0 10px;
+    overflow: hidden;
+}
+
+.monatsplan h1 {
+    padding-left: 5px;
+    padding-bottom: 0.33em;
+}
+
+.monatsplan hr {
+    page-break-before: always;
+    display: block;
+    clear: both;
+    height: 1px;
+    padding-bottom: 0.66em;
+    visibility: hidden;
+}
+
+.monatsplan ul {
+    page-break-inside: avoid;
+}
+
+.monatsplan .veranstaltung {
+    margin-bottom: 0.4em;
+}
+
+.monatsplan .veranstaltung + time, .monatsplan .veranstaltung + time + *, .monatsplan .veranstaltung + time + * + * {
+    display: none;
+}
+
+@page {
+    size: auto;
+    margin: 5mm;
+    /* auto is the initial value */
+}
+
+.oops, .sold-out, .cancelled {
+    color: white;
+    background-color: black;
+    padding: 0.1em 0.25em;
+    font-weight: normal;
+}
+
+/* Galerie */
+ul.thumbnails {
+    list-style: none;
+    margin-top: 8px;
+}
+
+ul.thumbnails li {
+    display: inline;
+    float: left;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    font-size: 15px;
+}
+
+ul.thumbnails li a {
+    display: block;
+    width: 112px;
+    height: 84px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+ul.thumbnails img {
+    width: 112px;
+    height: 84px;
+    opacity: 0.8;
+}
+
+ul.thumbnails li a:hover {
+    background-color: #06d56c;
+}
+
+ul.thumbnails li.selected {
+    background-color: #79fbb9;
+}
+
+.galerie #right img {
+    width: 460px;
+    height: auto;
+}
+
+/* ARCHIV: Bands von A bis Z */
+.archiv ol {
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+.archiv ol a:hover, .archiv ol a.sel {
+    background-color: #79fbb9;
+}
+
+.archiv ol li h1 {
+    line-height: 1.1;
+}
+
+ol.alphabet {
+    display: none;
+    padding-bottom: 1em;
+}
+
+ol.alphabet li {
+    display: inline-block;
+    width: 16px;
+}
+
+ol.alphabet a {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Partner (Subrubrik) */
+.partner .logos {
+    float: left;
+    width: 460px;
+    padding-left: 30px;
+}
+
+.partner .logos p {
+    margin-bottom: 20px;
+}
+
+/* Shop */
+.shop #main {
+    padding: 0;
+    background: transparent;
+}
+
+.shop #main article {
+    padding: 22px;
+    background-color: #79fbb9;
+}
+
+.shop .shop-item + .shop-item {
+    margin-top: 1em;
+}
+
+.shop a.buy {
+    float: right;
+    margin-right: 22px;
+}
+
+.kalender #main {
+    padding: 0;
+    background: transparent;
+}
+
+.kalender #main article {
+    padding: 22px;
+    background-color: #79fbb9;
+}
+
+.kalender article + article {
+    margin-top: 1em;
+}
+
+/* Info: */
+.info #right p + h1, .info #right .francais {
+    margin-top: 2em;
+}
+
+/*	---------------------------------------------
+##	LINKS
+*/
+a {
+    color: #222222;
+    text-decoration: none;
+}
+
+#main a, .subnav p a {
+    border-bottom: 1px solid #3c3c3c;
+}
+
+a.sel, .sel a, #spotlight:hover span {
+    /* background-color: @green; */
+    background-image: url('../img/textmarker.png');
+    background-repeat: repeat-x;
+    /* background-position: 23px 0 */
+}
+
+.subnav a:hover, nav a:hover {
+    /* background-color: @green; */
+    background-image: url('../img/textmarker.png');
+    background-repeat: repeat-x;
+    /* background-position: 23px 0 */
+}
+
+nav a:hover {
+    background-position: 0 -16px;
+}
+
+nav a.sel {
+    background-position: 0 -16px;
+}
+
+#performance-check {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 0.2em 0.4em;
+    line-height: 1.5em;
+    background-color: rgba(245, 2365, 216, 0.75);
+    font-size: 11px;
+    font-family: 'Lucida Grande', sans-serif;
+    z-index: 100;
+}
+
+/*	---------------------------------------------
+##	VERHALTEN
+*/
+#right {
+    animation: fadein 0.6s;
+    -moz-animation: fadein 0.6s;
+    /* Firefox */
+    -webkit-animation: fadein 0.6s;
+    /* Safari and Chrome */
+    -o-animation: fadein 0.6s;
+    /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media print {
+    #performance-check {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /*    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+*/
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+        /* h5bp.com/t */
+    }
+
+    tr, img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
