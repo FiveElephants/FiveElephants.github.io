@@ -1,0 +1,29 @@
+.leftbox {
+    border: 5px solid ;
+    width: 400px;
+    height: 120px;
+    left: 170px;
+    top: 30px;
+    position: fixed;
+    font-size: 50px;
+    text-align: center;
+}
+
+.fiveelephants {
+    position: relative;
+    top: 25%;
+}
+
+.rightbox {
+  border: 5px solid ;
+  width: 400px;
+  height: 120px;
+  left: 600px;
+  top: 30px;
+  position: fixed;
+}
+
+.tags{
+  padding: 20px;
+  font-size: 18px;
+}
