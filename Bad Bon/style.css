@@ -1,21 +1,34 @@
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .leftbox {
-    border: 5px solid ;
-    width: 400px;
-    height: 120px;
-    left: 170px;
-    top: 30px;
-    position: fixed;
-    font-size: 50px;
-    text-align: center;
+  border: 5px solid;
+  width: 400px;
+  height: 120px;
+  left: 170px;
+  top: 30px;
+  position: fixed;
+  font-size: 50px;
+  text-align: center;
+}
+
+.titles {
+  position: fixed;
+  top: 200px;
+  left: 180px;
+  width: 400px;
+  height: calc(100% - 200px);
+  overflow: scroll;
 }
 
 .fiveelephants {
-    position: relative;
-    top: 25%;
+  position: relative;
+  top: 25%;
 }
 
 .rightbox {
-  border: 5px solid ;
+  border: 5px solid;
   width: 400px;
   height: 120px;
   left: 600px;
@@ -23,7 +36,91 @@
   position: fixed;
 }
 
-.tags{
+.tags {
   padding: 20px;
   font-size: 18px;
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+}
+
+.container> div {
+  display: inline-block;
+  margin: 2%;
+  padding: 5px;
+
+}
+
+.title {
+  font-size: 35px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+
+/*******************Hover colors ********/
+
+#category1:hover {
+  background-color: #d1e8c5;
+  cursor: pointer;
+}
+
+#category2:hover {
+  background-color: #fcf6b1;
+  cursor: pointer;
+}
+
+#category3:hover {
+  background-color: #d2edf3;
+  cursor: pointer;
+}
+
+#category4:hover {
+  background-color: #fdcc99;
+  cursor: pointer;
+}
+
+#category5:hover {
+  background-color: #fbcbcc;
+  cursor: pointer;
+}
+
+#category6:hover {
+  background-color: #fbf6b3;
+  cursor: pointer;
+}
+
+.category1_profile_color:hover {
+  background-color: #d1e8c5;
+  cursor: pointer;
+}
+
+.category2_profile_color:hover {
+  background-color: #fcf6b1;
+  cursor: pointer;
+}
+
+.category3_profile_color:hover {
+  background-color: #d2edf3;
+  cursor: pointer;
+}
+
+.category4_profile_color:hover {
+  background-color: #fdcc99;
+  cursor: pointer;
+}
+
+.category5_profile_color:hover {
+  background-color: #fbcbcc;
+  cursor: pointer;
+}
+
+.category6_profile_color:hover {
+  background-color: #fbf6b3;
+  cursor: pointer;
 }
