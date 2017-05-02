@@ -22,6 +22,15 @@ body{
   overflow: scroll;
 }
 
+.previews {
+  position: fixed;
+  top: 200px;
+  left: 610px;
+  width: 400px;
+  height: calc(100% - 200px);
+  overflow: scroll;
+}
+
 .fiveelephants {
   position: relative;
   top: 25%;
@@ -123,4 +132,8 @@ body{
 .category6_profile_color:hover {
   background-color: #fbf6b3;
   cursor: pointer;
+}
+
+.embed-container {
+   padding-bottom: 40.25%;
 }
