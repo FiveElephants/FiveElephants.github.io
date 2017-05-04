@@ -342,6 +342,7 @@ function eventInitializations() {
   if(category2_profile_title1_preview){
     category2_profile_title1_preview.addEventListener('click', function(event) {
       window.location="category2_profile_title1_preview.html";
+
     });
   }
 
@@ -352,3 +353,30 @@ function eventInitializations() {
   }
 
 } //End of eventInitializations()
+
+function showImage(imgName) {
+    document.getElementById('largeImg').src = imgName;
+    showLargeImagePanel();
+    unselectAll();
+    var e = window.event;
+    if (e.stopPropagation) {
+      e.stopPropagation();
+    }
+    //IE8 and Lower
+    else {
+      e.cancelBubble = true;
+    }
+}
+
+function showLargeImagePanel() {
+    document.getElementById('largeImgPanel').style.visibility = 'visible';
+}
+
+function unselectAll() {
+    if (document.selection) document.selection.empty();
+    if (window.getSelection) window.getSelection().removeAllRanges();
+}
+
+function hideMe(obj) {
+    obj.style.visibility = 'hidden';
+}

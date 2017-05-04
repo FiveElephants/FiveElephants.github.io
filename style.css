@@ -170,3 +170,15 @@ body{
 .cursor-pointer{
   cursor: pointer;
 }
+
+.content-width{
+  text-align:justify;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+#largeImgPanel {
+    visibility: hidden;
+    position: fixed;
+    
+}
