@@ -6,7 +6,8 @@ body{
   border: 5px solid;
   width: 400px;
   height: 120px;
-  left: 170px;
+  /*left:170px;*/
+  left: 15%;
   top: 30px;
   position: fixed;
   font-size: 50px;
@@ -16,7 +17,8 @@ body{
 .titles {
   position: fixed;
   top: 200px;
-  left: 180px;
+  /*left: 180px;*/
+  left:15%;
   width: 400px;
   height: calc(100% - 200px);
   overflow: scroll;
@@ -25,7 +27,8 @@ body{
 .previews {
   position: fixed;
   top: 200px;
-  left: 610px;
+  /*left: 610px;*/
+  left: 50%;
   width: 400px;
   height: calc(100% - 200px);
   overflow: scroll;
@@ -40,7 +43,8 @@ body{
   border: 5px solid;
   width: 400px;
   height: 120px;
-  left: 600px;
+  /*left: 600px;*/
+  left: 50%;
   top: 30px;
   position: fixed;
 }
@@ -134,6 +138,35 @@ body{
   cursor: pointer;
 }
 
+.category1_preview_color{
+  background-color: #d1e8c5;
+  padding: 10px;
+}
+.category2_preview_color{
+  background-color: #fcf6b1;
+  padding: 10px;
+}
+.category3_preview_color{
+  background-color: #d2edf3;
+  padding: 10px;
+}
+.category4_preview_color{
+  background-color: #fdcc99;
+  padding: 10px;
+}
+.category5_preview_color{
+  background-color: #fbcbcc;
+  padding: 10px;
+}
+.category6_preview_color{
+  background-color: #fbf6b3;
+  padding: 10px;
+}
+
 .embed-container {
    padding-bottom: 40.25%;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
