@@ -6,7 +6,6 @@ body{
   border: 5px solid;
   width: 400px;
   height: 120px;
-  /*left:170px;*/
   left: 15%;
   top: 30px;
   position: fixed;
@@ -17,7 +16,6 @@ body{
 .titles {
   position: fixed;
   top: 200px;
-  /*left: 180px;*/
   left:15%;
   width: 400px;
   height: calc(100% - 200px);
@@ -27,7 +25,6 @@ body{
 .previews {
   position: fixed;
   top: 200px;
-  /*left: 610px;*/
   left: 50%;
   width: 400px;
   height: calc(100% - 200px);
@@ -43,7 +40,6 @@ body{
   border: 5px solid;
   width: 400px;
   height: 120px;
-  /*left: 600px;*/
   left: 50%;
   top: 30px;
   position: fixed;
@@ -55,7 +51,7 @@ body{
 }
 
 .container {
-  padding: 20px;
+  padding: 0px;
   width: 100%;
 }
 
@@ -180,5 +176,93 @@ body{
 #largeImgPanel {
     visibility: hidden;
     position: fixed;
-    
+
 }
+
+#logotype {
+
+    text-align: center;
+    text-align: middle;
+    text-color: solid gray;
+    width: 250px;
+    height: 50px;
+    border: 5px solid gray;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+/*Media Queries*/
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+
+/****Responsive ness **/
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+/************************/
