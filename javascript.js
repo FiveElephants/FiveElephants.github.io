@@ -76,6 +76,7 @@ var profileArray = [category1_profile, category2_profile, category3_profile,
 //Initializations
 noneInitializations(profileArray);
 eventInitializations();
+
 if (toShow){
   toShow.style.display = "block"
   if(toShowCategory)
@@ -380,4 +381,35 @@ function unselectAll() {
 
 function hideMe(obj) {
     obj.style.visibility = 'hidden';
+}
+
+
+function getQueryParams(qs) {
+    qs = qs.split('+').join(' ');
+
+    var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+    }
+
+    return params;
+}
+
+
+/****Reading the href attribute *****/
+//getting the parameter from href
+var queryParams = getQueryParams(document.location.search);
+if(queryParams.category == "acad"){
+  displayProfile(category2_profile);
+  displayPreview(category2_profile_title1_preview)
+  changeCategoryColor(category2, category2_color);
+  changeTitleColor(category2_profile_title1, category2_color)
+}else if(queryParams.category == "work"){
+  displayProfile(category1_profile);
+  displayPreview(category1_profile_title1_preview)
+  changeCategoryColor(category1, category1_color);
+  changeTitleColor(category1_profile_title1, category1_color)
 }
