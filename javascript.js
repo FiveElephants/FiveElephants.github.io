@@ -63,13 +63,13 @@ var toShowTitle = category2_profile_title1
 
 var profileArray = [category1_profile, category2_profile, category3_profile,
   category4_profile, category5_profile, category6_profile,
-  category1_profile_title1_preview,category1_profile_title2_preview,
-  category1_profile_title3_preview,category1_profile_title4_preview,
-  category1_profile_title5_preview,category1_profile_title6_preview,
+  category1_profile_title1_preview, category1_profile_title2_preview,
+  category1_profile_title3_preview, category1_profile_title4_preview,
+  category1_profile_title5_preview, category1_profile_title6_preview,
   category2_profile_title1_preview, category2_profile_title2_preview,
   category2_profile_title3_preview, category2_profile_title4_preview,
-  category2_profile_title5_preview,category2_profile_title6_preview,
-  category3_profile_title1_preview,category4_profile_title1_preview,
+  category2_profile_title5_preview, category2_profile_title6_preview,
+  category3_profile_title1_preview, category4_profile_title1_preview,
   category5_profile_title1_preview, category6_profile_title1_preview
 ];
 
@@ -77,13 +77,13 @@ var profileArray = [category1_profile, category2_profile, category3_profile,
 noneInitializations(profileArray);
 eventInitializations();
 
-if (toShow){
+if (toShow) {
   toShow.style.display = "block"
-  if(toShowCategory)
-  changeCategoryColor(toShowCategory, category2_color);
+  if (toShowCategory)
+    changeCategoryColor(toShowCategory, category2_color);
   changeTitleColor(toShowTitle, category2_color)
 }
-if (toShowTitlePreview){
+if (toShowTitlePreview) {
   toShowTitlePreview.style.display = "block"
 }
 
@@ -106,53 +106,57 @@ function displayProfile(profile) {
 
 //displaying all the preview
 function displayPreview(preview) {
-  toShowTitlePreview.style.display = "none"
-  toShowTitlePreview = preview
-  toShowTitlePreview.style.display = "block"
+  if (toShowTitlePreview) {
+    if(toShowTitlePreview.style)
+    toShowTitlePreview.style.display = "none"
+    toShowTitlePreview = preview
+    if(toShowTitlePreview.style)
+    toShowTitlePreview.style.display = "block"
+  }
 }
 
-function changeCategoryColor(category, color){
-  category1.style.backgroundColor="#ffffff"
-  category1.style.cssText = ":hover{color:"+category1_color+";}";
-  category2.style.backgroundColor="#ffffff"
-  category2.style.cssText = ":hover{color:"+category2_color+";}";
-  category3.style.backgroundColor="#ffffff"
-  category3.style.cssText = ":hover{color:"+category3_color+";}";
-  category4.style.backgroundColor="#ffffff"
-  category4.style.cssText = ":hover{color:"+category4_color+";}";
-  category5.style.backgroundColor="#ffffff"
-  category5.style.cssText = ":hover{color:"+category5_color+";}";
-  category6.style.backgroundColor="#ffffff"
-  category6.style.cssText = ":hover{color:"+category6_color+";}";
-  category.style.backgroundColor=color
+function changeCategoryColor(category, color) {
+  category1.style.backgroundColor = "#ffffff"
+  category1.style.cssText = ":hover{color:" + category1_color + ";}";
+  category2.style.backgroundColor = "#ffffff"
+  category2.style.cssText = ":hover{color:" + category2_color + ";}";
+  category3.style.backgroundColor = "#ffffff"
+  category3.style.cssText = ":hover{color:" + category3_color + ";}";
+  category4.style.backgroundColor = "#ffffff"
+  category4.style.cssText = ":hover{color:" + category4_color + ";}";
+  category5.style.backgroundColor = "#ffffff"
+  category5.style.cssText = ":hover{color:" + category5_color + ";}";
+  category6.style.backgroundColor = "#ffffff"
+  category6.style.cssText = ":hover{color:" + category6_color + ";}";
+  category.style.backgroundColor = color
 }
 
-function changeTitleColor(title, color){
-  category1_profile_title1.style.backgroundColor="#ffffff"
-  category1_profile_title1.style.cssText = ":hover{color:"+category1_color+";}";
-  category1_profile_title2.style.backgroundColor="#ffffff"
-  category1_profile_title2.style.cssText = ":hover{color:"+category1_color+";}";
-  category1_profile_title3.style.backgroundColor="#ffffff"
-  category1_profile_title3.style.cssText = ":hover{color:"+category1_color+";}";
-  category1_profile_title4.style.backgroundColor="#ffffff"
-  category1_profile_title4.style.cssText = ":hover{color:"+category1_color+";}";
-  category1_profile_title5.style.backgroundColor="#ffffff"
-  category1_profile_title5.style.cssText = ":hover{color:"+category1_color+";}";
-  category1_profile_title6.style.backgroundColor="#ffffff"
-  category1_profile_title6.style.cssText = ":hover{color:"+category1_color+";}";
-  category2_profile_title1.style.backgroundColor="#ffffff"
-  category2_profile_title1.style.cssText = ":hover{color:"+category2_color+";}";
-  category2_profile_title2.style.backgroundColor="#ffffff"
-  category2_profile_title2.style.cssText = ":hover{color:"+category2_color+";}";
-  category2_profile_title3.style.backgroundColor="#ffffff"
-  category2_profile_title3.style.cssText = ":hover{color:"+category2_color+";}";
-  category2_profile_title4.style.backgroundColor="#ffffff"
-  category2_profile_title4.style.cssText = ":hover{color:"+category2_color+";}";
-  category2_profile_title5.style.backgroundColor="#ffffff"
-  category2_profile_title5.style.cssText = ":hover{color:"+category2_color+";}";
-  category2_profile_title6.style.backgroundColor="#ffffff"
-  category2_profile_title6.style.cssText = ":hover{color:"+category2_color+";}";
-  title.style.backgroundColor=color
+function changeTitleColor(title, color) {
+  category1_profile_title1.style.backgroundColor = "#ffffff"
+  category1_profile_title1.style.cssText = ":hover{color:" + category1_color + ";}";
+  category1_profile_title2.style.backgroundColor = "#ffffff"
+  category1_profile_title2.style.cssText = ":hover{color:" + category1_color + ";}";
+  category1_profile_title3.style.backgroundColor = "#ffffff"
+  category1_profile_title3.style.cssText = ":hover{color:" + category1_color + ";}";
+  category1_profile_title4.style.backgroundColor = "#ffffff"
+  category1_profile_title4.style.cssText = ":hover{color:" + category1_color + ";}";
+  category1_profile_title5.style.backgroundColor = "#ffffff"
+  category1_profile_title5.style.cssText = ":hover{color:" + category1_color + ";}";
+  category1_profile_title6.style.backgroundColor = "#ffffff"
+  category1_profile_title6.style.cssText = ":hover{color:" + category1_color + ";}";
+  category2_profile_title1.style.backgroundColor = "#ffffff"
+  category2_profile_title1.style.cssText = ":hover{color:" + category2_color + ";}";
+  category2_profile_title2.style.backgroundColor = "#ffffff"
+  category2_profile_title2.style.cssText = ":hover{color:" + category2_color + ";}";
+  category2_profile_title3.style.backgroundColor = "#ffffff"
+  category2_profile_title3.style.cssText = ":hover{color:" + category2_color + ";}";
+  category2_profile_title4.style.backgroundColor = "#ffffff"
+  category2_profile_title4.style.cssText = ":hover{color:" + category2_color + ";}";
+  category2_profile_title5.style.backgroundColor = "#ffffff"
+  category2_profile_title5.style.cssText = ":hover{color:" + category2_color + ";}";
+  category2_profile_title6.style.backgroundColor = "#ffffff"
+  category2_profile_title6.style.cssText = ":hover{color:" + category2_color + ";}";
+  title.style.backgroundColor = color
 }
 
 function eventInitializations() {
@@ -180,11 +184,10 @@ function eventInitializations() {
   if (category3) {
 
     category3.addEventListener('click', function(event) {
-      /*displayProfile(category3_profile);
+      displayProfile(category3_profile);
       displayPreview(category3_profile_title1_preview)
       changeCategoryColor(category3, category3_color);
-      changeTitleColor(category3_profile_title1, category3_color)*/
-
+      changeTitleColor(category3_profile_title1, category3_color)
     });
   }
 
@@ -330,86 +333,97 @@ function eventInitializations() {
     });
   }
 
-  if(category1_profile_title1_preview){
+  if (category1_profile_title1_preview) {
     category1_profile_title1_preview.addEventListener('click', function(event) {
-      window.location="https://freshdesk.com";
+      window.location = "https://freshdesk.com";
     });
   }
-  if(category1_profile_title2_preview){
+  if (category1_profile_title2_preview) {
     category1_profile_title2_preview.addEventListener('click', function(event) {
 
     });
   }
 
-  if(category2_profile_title1_preview){
+  if (category2_profile_title1_preview) {
     category2_profile_title1_preview.addEventListener('click', function(event) {
-      window.location="category2_profile_title1_preview.html";
+      window.location = "category2_profile_title1_preview.html";
 
     });
   }
 
-  if(category2_profile_title2_preview){
+  if (category2_profile_title2_preview) {
     category2_profile_title2_preview.addEventListener('click', function(event) {
-      window.location="category2_profile_title2_preview.html";
+      window.location = "category2_profile_title2_preview.html";
     });
   }
 
 } //End of eventInitializations()
 
 function showImage(imgName) {
-    document.getElementById('largeImg').src = imgName;
-    showLargeImagePanel();
-    unselectAll();
-    var e = window.event;
-    if (e.stopPropagation) {
-      e.stopPropagation();
-    }
-    //IE8 and Lower
-    else {
-      e.cancelBubble = true;
-    }
+  document.getElementById('largeImg').src = imgName;
+  showLargeImagePanel();
+  unselectAll();
+  var e = window.event;
+  if (e.stopPropagation) {
+    e.stopPropagation();
+  }
+  //IE8 and Lower
+  else {
+    e.cancelBubble = true;
+  }
 }
 
 function showLargeImagePanel() {
-    document.getElementById('largeImgPanel').style.visibility = 'visible';
+  document.getElementById('largeImgPanel').style.visibility = 'visible';
 }
 
 function unselectAll() {
-    if (document.selection) document.selection.empty();
-    if (window.getSelection) window.getSelection().removeAllRanges();
+  if (document.selection) document.selection.empty();
+  if (window.getSelection) window.getSelection().removeAllRanges();
 }
 
 function hideMe(obj) {
-    obj.style.visibility = 'hidden';
+  obj.style.visibility = 'hidden';
 }
 
 
 function getQueryParams(qs) {
-    qs = qs.split('+').join(' ');
+  qs = qs.split('+').join(' ');
 
-    var params = {},
-        tokens,
-        re = /[?&]?([^=]+)=([^&]*)/g;
+  var params = {},
+    tokens,
+    re = /[?&]?([^=]+)=([^&]*)/g;
 
-    while (tokens = re.exec(qs)) {
-        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
-    }
+  while (tokens = re.exec(qs)) {
+    params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+  }
 
-    return params;
+  return params;
 }
 
 
 /****Reading the href attribute *****/
 //getting the parameter from href
 var queryParams = getQueryParams(document.location.search);
-if(queryParams.category == "acad"){
+console.log(queryParams);
+if (queryParams.category == "acad") {
   displayProfile(category2_profile);
   displayPreview(category2_profile_title1_preview)
   changeCategoryColor(category2, category2_color);
   changeTitleColor(category2_profile_title1, category2_color)
-}else if(queryParams.category == "work"){
+} else if (queryParams.category == "work") {
   displayProfile(category1_profile);
   displayPreview(category1_profile_title1_preview)
   changeCategoryColor(category1, category1_color);
   changeTitleColor(category1_profile_title1, category1_color)
+}
+
+var path = window.location.pathname;
+var page = path.split("/").pop();
+console.log( page );
+if(page == "games.html"){
+  displayProfile(category3_profile);
+  displayPreview(category3_profile_title1_preview)
+  changeCategoryColor(category3, category3_color);
+  changeTitleColor(category3_profile_title1, category3_color)
 }
