@@ -78,11 +78,13 @@ noneInitializations(profileArray);
 eventInitializations();
 
 if (toShow) {
-  toShow.style.display = "block"
+  toShow.style.display = "block";
   if (toShowCategory)
     changeCategoryColor(toShowCategory, category2_color);
-  changeTitleColor(toShowTitle, category2_color)
+  if (toShowTitle)
+    changeTitleColor(toShowTitle, category2_color)
 }
+
 if (toShowTitlePreview) {
   toShowTitlePreview.style.display = "block"
 }
@@ -106,12 +108,18 @@ function displayProfile(profile) {
 
 //displaying all the preview
 function displayPreview(preview) {
+  console.log("1");
   if (toShowTitlePreview) {
-    if(toShowTitlePreview.style)
-    toShowTitlePreview.style.display = "none"
+    console.log("2");
+    if (toShowTitlePreview.style){
+      console.log("3");
+      toShowTitlePreview.style.display = "none"
+    }
     toShowTitlePreview = preview
-    if(toShowTitlePreview.style)
-    toShowTitlePreview.style.display = "block"
+    if (toShowTitlePreview.style){
+      console.log("4");
+      toShowTitlePreview.style.display = "block"
+    }
   }
 }
 
@@ -193,32 +201,32 @@ function eventInitializations() {
 
   if (category4) {
 
-    /*category4.addEventListener('click', function(event) {
-      displayProfile(category4_profile);
+    category4.addEventListener('click', function(event) {
+      /*displayProfile(category4_profile);
       displayPreview(category4_profile_title1_preview)
       changeCategoryColor(category4, category4_color);
-      changeTitleColor(category4_profile_title1, category4_color)
-    });*/
+      changeTitleColor(category4_profile_title1, category4_color)*/
+    });
   }
 
   if (category5) {
 
-    /*category5.addEventListener('click', function(event) {
-      displayProfile(category5_profile);
+    category5.addEventListener('click', function(event) {
+      /*displayProfile(category5_profile);
       displayPreview(category5_profile_title1_preview)
       changeCategoryColor(category5, category5_color);
-      changeTitleColor(category5_profile_title1, category5_color)
-    });*/
+      changeTitleColor(category5_profile_title1, category5_color)*/
+    });
   }
 
   if (category6) {
 
-    /*category6.addEventListener('click', function(event) {
-      displayProfile(category6_profile);
+    category6.addEventListener('click', function(event) {
+      /*displayProfile(category6_profile);
       displayPreview(category6_profile_title1_preview)
       changeCategoryColor(category6, category6_color);
-      changeTitleColor(category6_profile_title1, category6_color)
-    });*/
+      changeTitleColor(category6_profile_title1, category6_color)*/
+    });
   }
 
   if (category1_profile_title1) {
@@ -420,8 +428,8 @@ if (queryParams.category == "acad") {
 
 var path = window.location.pathname;
 var page = path.split("/").pop();
-console.log( page );
-if(page == "games.html"){
+console.log(page);
+if (page == "games.html") {
   displayProfile(category3_profile);
   displayPreview(category3_profile_title1_preview)
   changeCategoryColor(category3, category3_color);
