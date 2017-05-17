@@ -197,6 +197,10 @@ display: block;
     padding-bottom: 40px;
     box-sizing: border-box;
 }
+.video_align{
+  margin: 0px auto;  
+}
+
 .menutwothird {
     width: 63%;
     float: left;
